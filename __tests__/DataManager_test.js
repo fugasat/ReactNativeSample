@@ -1,4 +1,4 @@
-import DataManager, { DataModel, addModel, removeModel } from "../apps/DataManager.js";
+import { DataModel, addModel, removeModel } from "../apps/DataManager.js";
 
 test("addModel", () => {
     // 新規作成時はID=0になる

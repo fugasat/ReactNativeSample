@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { View, Text, Button } from 'react-native';
 import { ModelContext } from './ModelContext';
-import {DataModel, removeModel} from "./DataManager.js"
+import { DetailView } from './DetailView';
+
 
 const DetailScreen = ({ route, navigation }) => {
 
@@ -9,20 +9,19 @@ const DetailScreen = ({ route, navigation }) => {
 
   //Homeから渡されたitemを受け取る
   const item = route.params;
-  console.log(item)
+  console.log(`view model : ${item.getName()}`)
 
-  const onPressRemoveButton = (item) => {
-    console.log(item)
-    const newModelArray = removeModel(modelArray, item)
+  const onModelUpdate = (newModelArray) => {
     setModel(newModelArray)
     navigation.goBack()
   }
 
   return (
-    <View>
-      <Text>{item.getName()}</Text>
-      <Button onPress={() => onPressRemoveButton(item)} title="Remove" />
-    </View>
+    <DetailView
+      item={item}
+      modelArray={modelArray}
+      onModelUpdate={onModelUpdate}
+    />
   );
 };
 

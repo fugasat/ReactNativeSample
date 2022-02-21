@@ -4,11 +4,12 @@
 
 import 'react-native';
 import React from 'react';
-import App from '../App';
+import App from '../apps/App';
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 
-it('renders correctly', () => {
-  renderer.create(<App />);
+test('renders correctly', () => {
+  const app = renderer.create(<App />);
+  console.log(app.toJSON())
 });
