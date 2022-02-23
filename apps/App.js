@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { ModelContext } from './ModelContext';
 import HomeScreen from './HomeScreen';
 import DetailScreen from './DetailScreen';
+import { DataModel } from "./DataManager";
 
 const Stack = createNativeStackNavigator();
 
