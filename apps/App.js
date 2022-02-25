@@ -17,7 +17,7 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator initialRouteName="home">
           <Stack.Screen name="home" component={HomeScreen} options={{title: "Model List"}}/>
-          <Stack.Screen name="detail" component={DetailScreen} />
+          <Stack.Screen name="detail" component={DetailScreen} options={{title: "Model Detail"}} />
         </Stack.Navigator>
       </NavigationContainer>
     </ModelContext.Provider>
